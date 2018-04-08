@@ -1,2 +1,0 @@
-# PSoC-SPI
-hi
