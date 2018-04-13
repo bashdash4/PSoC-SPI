@@ -62,6 +62,8 @@ LED_Write(1); //it works!!!
 
 ## Traditional Slave Select
  
+![alt text](https://raw.githubusercontent.com/bashdash4/PSoC-SPI/master/SPI%20master%20slave.PNG) 
+ 
 Using a 1:2 Demultiplexer and a control register, you’re able to have two different slave selects to address two different slaves with one master (of course more can be added with more parts). Though this is the most reliable way for one master to communicate with multiple slaves, it requires more wiring and more work on the part of the programmer when the time comes to develop a more complex system. 
 
 In this system, if one were to enable a certain slave select, you would use the function “Control_Reg_1_Write(X);”, with X being either 0 for the first slave select or 1 for the second slave select.
