@@ -60,13 +60,13 @@ if (SPIM_ReadRxData() == 0xAAu) //if master receives the response...
 LED_Write(1); //it works!!!
 ```
 
-##Traditional Slave Select
-
+## Traditional Slave Select
+ 
 Using a 1:2 Demultiplexer and a control register, you’re able to have two different slave selects to address two different slaves with one master (of course more can be added with more parts). Though this is the most reliable way for one master to communicate with multiple slaves, it requires more wiring and more work on the part of the programmer when the time comes to develop a more complex system. 
 
 In this system, if one were to enable a certain slave select, you would use the function “Control_Reg_1_Write(X);”, with X being either 0 for the first slave select or 1 for the second slave select.
 
-##Slave Select via Addressing
+## Slave Select via Addressing
 
 The other way to do this, which allows a master to address one slave out of several all connected to the same slave select is to create a system with sent messages involving an addressing bit and a data bit. Though, like other decimals, this would typically be done with hexadecimals (though it would likely depend on the hardware that the PSoC is communicating with), I’ve made a proof of concept that is easy to understand which involves the use of two-digit decimal numbers.
 
